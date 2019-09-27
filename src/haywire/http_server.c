@@ -5,12 +5,14 @@
 
 #ifdef PLATFORM_POSIX
 #include <signal.h>
+#else
+#define _MSC_VER   1916
 #endif // PLATFORM_POSIX
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <sys/socket.h>
+#include "sys/socket.h"
 #include <haywire.h>
 #include "uv.h"
 #include "hw_string.h"
